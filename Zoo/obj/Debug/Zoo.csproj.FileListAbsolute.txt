@@ -1,0 +1,11 @@
+C:\Users\Alexey\Desktop\Примеры№2\Примеры\BSA-17-.NET.-Lecture-2---.NET-master\Zoo\Zoo\bin\Debug\Zoo.exe.config
+C:\Users\Alexey\Desktop\Примеры№2\Примеры\BSA-17-.NET.-Lecture-2---.NET-master\Zoo\Zoo\bin\Debug\Zoo.exe
+C:\Users\Alexey\Desktop\Примеры№2\Примеры\BSA-17-.NET.-Lecture-2---.NET-master\Zoo\Zoo\bin\Debug\Zoo.pdb
+C:\Users\Alexey\Desktop\Примеры№2\Примеры\BSA-17-.NET.-Lecture-2---.NET-master\Zoo\Zoo\obj\Debug\Zoo.exe
+C:\Users\Alexey\Desktop\Примеры№2\Примеры\BSA-17-.NET.-Lecture-2---.NET-master\Zoo\Zoo\obj\Debug\Zoo.pdb
+C:\Users\Alexey\Desktop\BSA-17-.NET.-Lecture-2---.NET-master\Zoo\Zoo\bin\Debug\Zoo.exe.config
+C:\Users\Alexey\Desktop\BSA-17-.NET.-Lecture-2---.NET-master\Zoo\Zoo\bin\Debug\Zoo.exe
+C:\Users\Alexey\Desktop\BSA-17-.NET.-Lecture-2---.NET-master\Zoo\Zoo\bin\Debug\Zoo.pdb
+C:\Users\Alexey\Desktop\BSA-17-.NET.-Lecture-2---.NET-master\Zoo\Zoo\obj\Debug\Zoo.csprojResolveAssemblyReference.cache
+C:\Users\Alexey\Desktop\BSA-17-.NET.-Lecture-2---.NET-master\Zoo\Zoo\obj\Debug\Zoo.exe
+C:\Users\Alexey\Desktop\BSA-17-.NET.-Lecture-2---.NET-master\Zoo\Zoo\obj\Debug\Zoo.pdb
