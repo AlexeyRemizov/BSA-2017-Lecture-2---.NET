@@ -1,4 +1,4 @@
-﻿using Zoo.StatePattern;
+﻿using Zoo.StateAnimal;
 
 namespace Zoo.Animals
 {
@@ -10,12 +10,12 @@ namespace Zoo.Animals
             MaxHealth = health;
             PetName = petname;
             Zoo = zoo;
-            CurrentState = new StateFull();
+            CurrentState = new Full();
 		}
 
-		public void Downgrade()
+		public void Decline()
 		{
-			CurrentState.Downgrade(this);
+			CurrentState.Decline(this);
 		}
 
 		public void Feed()

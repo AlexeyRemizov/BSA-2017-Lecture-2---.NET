@@ -9,8 +9,8 @@ namespace Zoo
         public List<Animal> Animals { get; private set; }
         public Timer ZooTimer { get; private set; }
         public int DeadAnimals { get; set; }
-
-        public Zoo()
+		
+		public Zoo()
         {
             Animals=new List<Animal>();
             ZooTimer=new Timer(MyEventHandler);
@@ -21,7 +21,7 @@ namespace Zoo
             var index= GetRandomIndex();
             if (index != -1) 
             {
-                Animals[index]?.Downgrade();
+                Animals[index]?.Decline();
 
             }
             

@@ -1,18 +1,18 @@
 ﻿using System;
 using Zoo.Animals;
 
-namespace Zoo.StatePattern
+namespace Zoo.StateAnimal
 {
-    class StateFull : StatePattern.State
+    class Full : StateAnimal.State
     {
         public override void Cure(Animal animal)
         {
             Console.WriteLine("\nI'm healthy! Don't cure me!\n");
         }
 
-        public override void Downgrade(Animal animal)
+        public override void Decline(Animal animal)
         {
-           animal.CurrentState=new StateHungry();
+           animal.CurrentState=new Hungry();
         }
 
         public override void Feed(Animal animal)

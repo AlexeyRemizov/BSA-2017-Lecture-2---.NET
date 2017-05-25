@@ -1,24 +1,23 @@
 ﻿using System;
 using Zoo.Animals;
 
-namespace Zoo.StatePattern
+namespace Zoo.StateAnimal
 {
-    class StateHungry : StatePattern.State
+    class Hungry : StateAnimal.State
     {
         public override void Cure(Animal animal)
         {
-           // throw new NotImplementedException();
             Console.WriteLine( "I am not sick! I am hungry! Please feed me:)" );
         }
 
-        public override void Downgrade(Animal animal)
+        public override void Decline(Animal animal)
         {
-            animal.CurrentState=new StateSick();
+            animal.CurrentState=new Sick();
         }
 
         public override void Feed(Animal animal)
         {
-            animal.CurrentState = new StateFull();
+            animal.CurrentState = new Full();
             Console.WriteLine("The animal with alias {0} has been fed!", animal.PetName);
         }
 

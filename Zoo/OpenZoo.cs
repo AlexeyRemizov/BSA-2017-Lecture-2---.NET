@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Zoo.Animals;
+using System.Threading;
 
 namespace Zoo.OpenZoo
 {
@@ -34,10 +35,12 @@ namespace Zoo.OpenZoo
 			3 - Cure the animal
 			===========================
 			4 - Remove the dead animal
+			===========================
+			5 - Exit
 			===========================");
 
 			var value = Console.ReadLine();
-			if (!int.TryParse(value, out result) || result > 4 || result < 1)
+			if (!int.TryParse(value, out result) || result > 5 || result < 1)
 			{
 				Console.WriteLine("Incorrect value!");
 			}
@@ -58,6 +61,11 @@ namespace Zoo.OpenZoo
 					case 4:
 						FindbyPetName()?.Remove();
 						break;
+					case 5:
+						Console.WriteLine("With best regards!!! Your zoo");
+						Thread.Sleep(3000);
+						Environment.Exit(0);
+						break;
 				}
 			}
 
@@ -67,28 +75,40 @@ namespace Zoo.OpenZoo
 		void AddAnimal()
         {
 			int result;
-            Console.WriteLine("Enter a new animal: 1 - Bear, 2 - Elephant, 3 - Fox, 4- Lion, 5 - Tiger, 6 - Wolf");
+            Console.WriteLine(@"Enter a new animal or exit: 
+		=====================
+		1 - Bear	
+		=====================
+		2 - Elephant
+		=====================
+		3 - Fox
+		=====================
+		4 - Lion
+		=====================
+		5 - Tiger
+		=====================
+		6 - Wolf
+		=====================");
 			var value = Console.ReadLine();
-			if (!int.TryParse(value, out result) || result > 6 || result < 1)
+
+			if (!int.TryParse(value, out result) || result > 7 || result < 1)
             {
                 Console.WriteLine("\n Incorrect value!\n");
             }
             else
             {
-                Console.WriteLine("\nPlease, enter the animal's pet name.");
+                Console.WriteLine("\nEnter the animal's pet name.");
                 var petname = Console.ReadLine();
-
+				if (zoo.Animals.Any(x => x.PetName == petname))
+				{
+					Console.WriteLine("\nThe animal with pet name {0} exists\n", petname);
+					return;
+				}
 				if (petname.Length > 10 || petname.Length == 0 )
                 {
                     Console.WriteLine("\nThe pet name should not be longer then 10 symbols or be empty!");
                     return;
-                }
-
-				if (zoo.Animals.Any(x => x.PetName == petname))
-                {
-                    Console.WriteLine("\nThe animal with pet name {0} already exists\n", petname);
-                    return;
-                }
+                }				
                 switch (result)
                 {
                     case 1:
@@ -109,6 +129,11 @@ namespace Zoo.OpenZoo
                     case 6:
                         zoo.Animals.Add(new Wolf(petname, zoo));
                         break;
+					case 7:
+						Console.WriteLine("With best regards!!! Your zoo");
+						Thread.Sleep(3000);
+						Environment.Exit(0);
+						break;
 					default:
 						break;
                 }

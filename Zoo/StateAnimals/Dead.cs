@@ -1,11 +1,11 @@
 ﻿using System;
 using Zoo.Animals;
 
-namespace Zoo.StatePattern
+namespace Zoo.StateAnimal
 {
-    class StateDead : StatePattern.State
+    class Dead : StateAnimal.State
     {
-		public override void Downgrade(Animal animal)
+		public override void Decline(Animal animal)
 		{
 
 		}

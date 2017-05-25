@@ -2,9 +2,9 @@
 using System.Threading;
 using Zoo.Animals;
 
-namespace Zoo.StatePattern
+namespace Zoo.StateAnimal
 {
-    class StateSick : State
+    class Sick : State
     {
         public override void Cure(Animal animal)
         {
@@ -16,7 +16,7 @@ namespace Zoo.StatePattern
             else { Console.WriteLine("The {0} has maximum health {1}", animal.PetName, animal.MaxHealth);}
         }
 
-        public override void Downgrade(Animal animal)
+        public override void Decline(Animal animal)
         {
             if (animal.Health > 1)
             {
@@ -24,18 +24,17 @@ namespace Zoo.StatePattern
             }
             else
             {
-                animal.CurrentState=new StateDead();
+                animal.CurrentState=new Dead();
                 animal.Health = 0;
                 animal.Zoo.DeadAnimals++;
                 if (animal.Zoo.DeadAnimals==animal.Zoo.Animals.Count)
                 {
-                    Console.Beep();
-                    Console.WriteLine("There isn't any alive animal in the zoo.");
-                    Thread.Sleep(2000);
-                    Environment.Exit(0);
+                    Console.WriteLine(" Your journey does not end here. Maybe one more time. All dead");
+                    
                 }
-                animal.Zoo.Animals.Remove(animal);
-                animal.Zoo.Animals.Add(animal);
+				animal.Zoo.Animals.Add(animal);
+				animal.Zoo.Animals.Remove(animal);
+                
             }
         }
 

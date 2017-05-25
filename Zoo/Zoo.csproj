@@ -61,10 +61,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StateAnimals\State.cs" />
-    <Compile Include="StateAnimals\StateDead.cs" />
-    <Compile Include="StateAnimals\StateFull.cs" />
-    <Compile Include="StateAnimals\StateHungry.cs" />
-    <Compile Include="StateAnimals\StateSick.cs" />
+    <Compile Include="StateAnimals\Dead.cs" />
+    <Compile Include="StateAnimals\Full.cs" />
+    <Compile Include="StateAnimals\Hungry.cs" />
+    <Compile Include="StateAnimals\Sick.cs" />
     <Compile Include="Zoo.cs" />
     <Compile Include="Timer.cs" />
   </ItemGroup>

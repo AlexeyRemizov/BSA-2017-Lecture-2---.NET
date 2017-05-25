@@ -1,13 +1,16 @@
 ﻿using Zoo.Animals;
 
-namespace Zoo.StatePattern
+namespace Zoo.StateAnimal
 {
     abstract class State
     {
-        //Base class for implementing State Pattern of GoF design patterns
-        public abstract void Feed(Animal animal);
-        public abstract void Cure(Animal animal);
-        public abstract void Remove(Animal animal);
-        public abstract void Downgrade(Animal animal);
+
+		public abstract void Remove(Animal animal);
+
+		public abstract void Decline(Animal animal);
+
+		public abstract void Feed(Animal animal);
+
+		public abstract void Cure(Animal animal);
     }
 }
